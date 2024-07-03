@@ -93,7 +93,7 @@ int main(int argc, char **argv)
         {
             ls = true;
             threshold_T = char_2_double(argv, 9);
-            success = ImageRecovery::leastSquares(degraded_img, dest_img, psf, char_2_double(argv, 9));
+            success = ImageRecovery::leastSquares(degraded_img, dest_img, psf, threshold_T);
         }
         /* <source-path> <input-path> <output-path> -recov -iterLS -<psf-type> <psf-size> <sigma || angle || radius> <beta> <maxIter> */
         else if (str_compare(argv[5], "-iterLS"))
@@ -101,7 +101,7 @@ int main(int argc, char **argv)
             iterLS = true;
             beta = char_2_double(argv, 9);
             maxIter = char_2_int(argv, 10);
-            success = ImageRecovery::iterativeLeastSquares(degraded_img, dest_img, psf, char_2_double(argv, 9), char_2_int(argv, 10));
+            success = ImageRecovery::iterativeLeastSquares(degraded_img, dest_img, psf, beta, maxIter);
         }
         /* <source-path> <degraded-path> <output-path> -recov -cls -<psf-type> <psf-size> <sigma || angle || radius> <alpha> <threshold-T> */
         else if (str_compare(argv[5], "-cls"))
@@ -109,7 +109,15 @@ int main(int argc, char **argv)
             cls = true;
             alpha = char_2_double(argv, 9);
             threshold_T = char_2_double(argv, 10);
-            success = ImageRecovery::constrainedLS(degraded_img, dest_img, psf, char_2_double(argv, 9), char_2_double(argv, 10));
+            success = ImageRecovery::constrainedLS(degraded_img, dest_img, psf, alpha, threshold_T);
+        }
+        /* <source-path> <degraded-path> <output-path> -recov -iterCLS -<psf-type> <psf-size> <sigma || angle || radius> <alpha> <beta> <maxIter> */
+        else if (str_compare(argv[5], "-iterCLS")) {
+            iterCLS = true;
+            alpha = char_2_double(argv, 9);
+            beta = char_2_double(argv, 10);
+            maxIter = char_2_int(argv, 11);
+            success = ImageRecovery::iterativeCLS(source_img, degraded_img, dest_img, psf, alpha, beta, maxIter);
         }
     }
 

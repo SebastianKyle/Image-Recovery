@@ -73,34 +73,35 @@
     },
     "cmake.debugConfig": {
         "args": [
-            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
-            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_gau_cameraman.png",
-            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_iterLS_gau_cameraman.png",
-            // "-recov",
-            // "-iterLS",
-            // "-gau",
-            // "5",
-            // "1.2",
-            // "0.0000001", // beta
-            // "1000"       // maxIter
-
             "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
-            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_defocus_5_10_8_cameraman.png",
-            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_cls_defocus_0dot0001_0dot02_cameraman.png",
+            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_motion_7_30_8_cameraman.png",
+            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_iterLS_motion_cameraman.png",
             "-recov",
-            "-cls",
-            "-defocus",
-            "5",
-            "10",
-            "0.0001", // threshold_T
-            "0.02"   // alpha
+            "-iterCLS",
+            "-motion",
+            "7",
+            "30",
+            "0.02",   // alpha
+            "0.0001", // beta
+            "100"     // maxIter
 
             // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
             // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_defocus_5_10_8_cameraman.png",
-            // "-degr",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_cls_defocus_0dot0001_0dot02_cameraman.png",
+            // "-recov",
+            // "-cls",
             // "-defocus",
             // "5",
             // "10",
+            // "0.0001", // threshold_T
+            // "0.02"   // alpha
+
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_motion_5_1dot2_8_cameraman.png",
+            // "-degr",
+            // "-gau",
+            // "5",
+            // "1.2",
             // "8"   // noise std
         ],
         "cwd": "${workspaceFolder}",

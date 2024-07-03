@@ -59,7 +59,7 @@ int ImageRecovery::iterativeLeastSquares(const cv::Mat &source_img, cv::Mat &des
     double max_H = 0;
     cv::Point max_loc;
     cv::minMaxLoc(planes[0], nullptr, &max_H, nullptr, &max_loc);
-    std::cout << "\n Upper range for beta: " << (double) 2/max_H << std::endl;
+    std::cout << "\n Upper range for beta: " << (double)2 / max_H << std::endl;
 
     // Initialize F0
     cv::Mat F = cv::Mat::zeros(Y.size(), Y.type());
@@ -89,8 +89,9 @@ int ImageRecovery::iterativeLeastSquares(const cv::Mat &source_img, cv::Mat &des
         F = F_new;
 
         // Check for convergence
-        if (current_rmse < 1e-4)
+        if (current_rmse < 1e-1)
         {
+            std::cout << "\n Stopped at " << iter + 1 << "th iteration." << std::endl;
             break;
         }
         prev_rmse = current_rmse;
@@ -104,7 +105,8 @@ int ImageRecovery::iterativeLeastSquares(const cv::Mat &source_img, cv::Mat &des
     return 1;
 }
 
-int ImageRecovery::constrainedLS(const cv::Mat &source_img, cv::Mat &dest_img, const cv::Mat &psf, double alpha, double threshold_T) {
+int ImageRecovery::constrainedLS(const cv::Mat &source_img, cv::Mat &dest_img, const cv::Mat &psf, double alpha, double threshold_T)
+{
     if (!source_img.data)
         return 0;
 
@@ -145,10 +147,65 @@ int ImageRecovery::constrainedLS(const cv::Mat &source_img, cv::Mat &dest_img, c
     return 1;
 }
 
-int ImageRecovery::iterativeCLS(const cv::Mat &source_img, cv::Mat &dest_img, const cv::Mat &psf, int maxIter)
+int ImageRecovery::iterativeCLS(const cv::Mat source_img, const cv::Mat &degraded_img, cv::Mat &dest_img, const cv::Mat &psf, double alpha, double beta, int maxIter)
 {
-    if (!source_img.data)
+    if (!degraded_img.data)
         return 0;
+
+    cv::Mat source_float;
+    degraded_img.convertTo(source_float, CV_32F);
+
+    cv::Mat Y = computeDFT(source_float);
+    cv::Mat H = computeDFT(psf, degraded_img.size());
+
+    cv::Mat H_conj = conjugate(H);
+
+    cv::Mat H_mag_squared;
+    cv::mulSpectrums(H, H_conj, H_mag_squared, 0);
+
+    cv::Mat laplacian = (cv::Mat_<float>(3, 3) << 0, 0.25, 0, 0.25, -1, 0.25, 0, 0.25, 0);
+    cv::Mat C = computeDFT(laplacian, source_float.size());
+    cv::Mat C_mag_2;
+    cv::magnitude(C, C, C_mag_2);
+    C_mag_2 = C_mag_2.mul(C_mag_2);
+
+    cv::Mat F = cv::Mat::zeros(Y.size(), Y.type());
+    double prev_ISNR = computeISNR(source_img, degraded_img, computeIDFT(F));
+    for (int iter = 0; iter < maxIter; iter++)
+    {
+        // beta.H*(u,v).Y(u,v)
+        cv::Mat term1;
+        cv::mulSpectrums(H_conj, Y, term1, 0);
+        term1 *= beta;
+
+        // (1 - beta.(|H(u, v)|^2 + alpha.|C(u, v)|^2)).Fk(u, v)
+        cv::Mat term2;
+        cv::Mat mul_term;
+        cv::subtract(cv::Scalar::all(1.0), (H_mag_squared + C_mag_2 * alpha) * beta, mul_term);
+        cv::mulSpectrums(mul_term, F, term2, 0);
+
+        // Obtain Fk+1
+        cv::Mat F_new;
+        cv::add(term1, term2, F_new);
+
+        cv::Mat restored_img = computeIDFT(F_new);
+        cv::normalize(restored_img, restored_img, 0, 255, cv::NORM_MINMAX);
+        restored_img.convertTo(restored_img, CV_8U);
+
+        double curr_ISNR = computeISNR(source_img, degraded_img, restored_img);
+        if (curr_ISNR <= prev_ISNR) {
+            std::cout << "\n Stopped at " << iter + 1 << "th iteration." << std::endl;
+            break;
+        }
+        prev_ISNR = curr_ISNR;
+
+        F = F_new;
+    }
+
+    dest_img = computeIDFT(F);
+
+    cv::normalize(dest_img, dest_img, 0, 255, cv::NORM_MINMAX);
+    dest_img.convertTo(dest_img, CV_8U);
 
     return 1;
 }
