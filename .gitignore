@@ -1,0 +1,4 @@
+/out/build/Visual Studio/.vs
+*.pdb
+*.user
+*.log

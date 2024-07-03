@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Self_Practicing\Computer Vision\Learning_OpenCV\ImageRecovery\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Self_Practicing\Computer Vision\Learning_OpenCV\ImageRecovery\src\libs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Self_Practicing\Computer Vision\Learning_OpenCV\ImageRecovery\src\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Self_Practicing\Computer Vision\Learning_OpenCV\ImageRecovery\src\ImageRecovery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Self_Practicing\Computer Vision\Learning_OpenCV\ImageRecovery\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C07E8E2C-E7BA-3F82-89B8-0E35FB79757F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+^D:\SELF_PRACTICING\COMPUTER VISION\LEARNING_OPENCV\IMAGERECOVERY\OUT\BUILD\VISUAL STUDIO\CMAKEFILES\030F2CE977C3590533D2125A866B0FFE\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery" "-BD:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/ImageRecovery.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

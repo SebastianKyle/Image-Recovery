@@ -1,0 +1,9 @@
+D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/ImageRecovery.dir
+D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/Experimental.dir
+D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/Nightly.dir
+D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/Continuous.dir
+D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/NightlyMemoryCheck.dir
+D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/PACKAGE.dir
+D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/RUN_TESTS.dir
+D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/ALL_BUILD.dir
+D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,491 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.7.2+d6990bcfa for .NET Framework
+      Build started 7/2/2024 9:46:36 AM.
+      
+      Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\3.29.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\3.29.2\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\3.29.2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.06
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/3.29.2/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.7.2+d6990bcfa for .NET Framework
+      Build started 7/2/2024 9:46:37 AM.
+      
+      Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.70
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/3.29.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-5m7q5e"
+      binary: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-5m7q5e"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-5m7q5e'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_39107.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 7/2/2024 9:46:38 AM.
+        
+        Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-5m7q5e\\cmTC_39107.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_39107.dir\\Debug\\".
+          Creating directory "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-5m7q5e\\Debug\\".
+          Creating directory "cmTC_39107.dir\\Debug\\cmTC_39107.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_39107.dir\\Debug\\cmTC_39107.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_39107.dir\\Debug\\cmTC_39107.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_39107.dir\\Debug\\\\" /Fd"cmTC_39107.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32824 for x64
+          CMakeCCompilerABI.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_39107.dir\\Debug\\\\" /Fd"cmTC_39107.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-5m7q5e\\Debug\\cmTC_39107.exe" /INCREMENTAL /ILK:"cmTC_39107.dir\\Debug\\cmTC_39107.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-5m7q5e/Debug/cmTC_39107.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-5m7q5e/Debug/cmTC_39107.lib" /MACHINE:X64  /machine:x64 cmTC_39107.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_39107.vcxproj -> D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-5m7q5e\\Debug\\cmTC_39107.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_39107.dir\\Debug\\cmTC_39107.tlog\\unsuccessfulbuild".
+          Touching "cmTC_39107.dir\\Debug\\cmTC_39107.tlog\\cmTC_39107.lastbuildstate".
+        Done Building Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-5m7q5e\\cmTC_39107.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.07
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.37.32822/bin/HostX86/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.37.32822/bin/HostX86/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.37.32824.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-ng2z8u"
+      binary: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-ng2z8u"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-ng2z8u'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c97ce.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 7/2/2024 9:46:40 AM.
+        
+        Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-ng2z8u\\cmTC_c97ce.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_c97ce.dir\\Debug\\".
+          Creating directory "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-ng2z8u\\Debug\\".
+          Creating directory "cmTC_c97ce.dir\\Debug\\cmTC_c97ce.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_c97ce.dir\\Debug\\cmTC_c97ce.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c97ce.dir\\Debug\\cmTC_c97ce.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c97ce.dir\\Debug\\\\" /Fd"cmTC_c97ce.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32824 for x64
+          CMakeCXXCompilerABI.cpp
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c97ce.dir\\Debug\\\\" /Fd"cmTC_c97ce.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-ng2z8u\\Debug\\cmTC_c97ce.exe" /INCREMENTAL /ILK:"cmTC_c97ce.dir\\Debug\\cmTC_c97ce.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-ng2z8u/Debug/cmTC_c97ce.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-ng2z8u/Debug/cmTC_c97ce.lib" /MACHINE:X64  /machine:x64 cmTC_c97ce.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_c97ce.vcxproj -> D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-ng2z8u\\Debug\\cmTC_c97ce.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_c97ce.dir\\Debug\\cmTC_c97ce.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c97ce.dir\\Debug\\cmTC_c97ce.tlog\\cmTC_c97ce.lastbuildstate".
+        Done Building Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-ng2z8u\\cmTC_c97ce.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.69
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.37.32822/bin/HostX86/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.37.32822/bin/HostX86/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.37.32824.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenMP.cmake:219 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenMP.cmake:487 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:11 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-stqkvi"
+      binary: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-stqkvi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_openmp"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-stqkvi'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e9abc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 7/2/2024 9:49:44 AM.
+        
+        Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-stqkvi\\cmTC_e9abc.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_e9abc.dir\\Debug\\".
+          Creating directory "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-stqkvi\\Debug\\".
+          Creating directory "cmTC_e9abc.dir\\Debug\\cmTC_e9abc.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_e9abc.dir\\Debug\\cmTC_e9abc.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e9abc.dir\\Debug\\cmTC_e9abc.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_e9abc.dir\\Debug\\\\" /Fd"cmTC_e9abc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-stqkvi\\OpenMPTryFlag.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32824 for x64
+          OpenMPTryFlag.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_e9abc.dir\\Debug\\\\" /Fd"cmTC_e9abc.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-stqkvi\\OpenMPTryFlag.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-stqkvi\\Debug\\cmTC_e9abc.exe" /INCREMENTAL /ILK:"cmTC_e9abc.dir\\Debug\\cmTC_e9abc.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-stqkvi/Debug/cmTC_e9abc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-stqkvi/Debug/cmTC_e9abc.lib" /MACHINE:X64  /machine:x64 cmTC_e9abc.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_e9abc.vcxproj -> D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-stqkvi\\Debug\\cmTC_e9abc.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_e9abc.dir\\Debug\\cmTC_e9abc.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e9abc.dir\\Debug\\cmTC_e9abc.tlog\\cmTC_e9abc.lastbuildstate".
+        Done Building Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-stqkvi\\cmTC_e9abc.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.88
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenMP.cmake:219 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenMP.cmake:487 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:11 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-gua885"
+      binary: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-gua885"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_openmp"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-gua885'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e435f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 7/2/2024 9:49:46 AM.
+        
+        Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-gua885\\cmTC_e435f.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_e435f.dir\\Debug\\".
+          Creating directory "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-gua885\\Debug\\".
+          Creating directory "cmTC_e435f.dir\\Debug\\cmTC_e435f.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_e435f.dir\\Debug\\cmTC_e435f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e435f.dir\\Debug\\cmTC_e435f.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_e435f.dir\\Debug\\\\" /Fd"cmTC_e435f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-gua885\\OpenMPTryFlag.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32824 for x64
+          OpenMPTryFlag.cpp
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_e435f.dir\\Debug\\\\" /Fd"cmTC_e435f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-gua885\\OpenMPTryFlag.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-gua885\\Debug\\cmTC_e435f.exe" /INCREMENTAL /ILK:"cmTC_e435f.dir\\Debug\\cmTC_e435f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-gua885/Debug/cmTC_e435f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-gua885/Debug/cmTC_e435f.lib" /MACHINE:X64  /machine:x64 cmTC_e435f.dir\\Debug\\OpenMPTryFlag.obj
+          cmTC_e435f.vcxproj -> D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-gua885\\Debug\\cmTC_e435f.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_e435f.dir\\Debug\\cmTC_e435f.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e435f.dir\\Debug\\cmTC_e435f.tlog\\cmTC_e435f.lastbuildstate".
+        Done Building Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-gua885\\cmTC_e435f.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.68
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenMP.cmake:421 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenMP.cmake:561 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:11 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-cf8r20"
+      binary: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-cf8r20"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-cf8r20'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_11066.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 7/2/2024 9:49:46 AM.
+        
+        Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-cf8r20\\cmTC_11066.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_11066.dir\\Debug\\".
+          Creating directory "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-cf8r20\\Debug\\".
+          Creating directory "cmTC_11066.dir\\Debug\\cmTC_11066.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_11066.dir\\Debug\\cmTC_11066.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_11066.dir\\Debug\\cmTC_11066.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_11066.dir\\Debug\\\\" /Fd"cmTC_11066.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-cf8r20\\OpenMPCheckVersion.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32824 for x64
+          OpenMPCheckVersion.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /openmp /Fo"cmTC_11066.dir\\Debug\\\\" /Fd"cmTC_11066.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-cf8r20\\OpenMPCheckVersion.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-cf8r20\\Debug\\cmTC_11066.exe" /INCREMENTAL /ILK:"cmTC_11066.dir\\Debug\\cmTC_11066.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-cf8r20/Debug/cmTC_11066.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-cf8r20/Debug/cmTC_11066.lib" /MACHINE:X64  /machine:x64 cmTC_11066.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_11066.vcxproj -> D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-cf8r20\\Debug\\cmTC_11066.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_11066.dir\\Debug\\cmTC_11066.tlog\\unsuccessfulbuild".
+          Touching "cmTC_11066.dir\\Debug\\cmTC_11066.tlog\\cmTC_11066.lastbuildstate".
+        Done Building Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-cf8r20\\cmTC_11066.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.76
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenMP.cmake:421 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenMP.cmake:561 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:11 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-9vf7ow"
+      binary: "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-9vf7ow"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-9vf7ow'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6f704.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.7.2+d6990bcfa for .NET Framework
+        Build started 7/2/2024 9:49:47 AM.
+        
+        Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-9vf7ow\\cmTC_6f704.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_6f704.dir\\Debug\\".
+          Creating directory "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-9vf7ow\\Debug\\".
+          Creating directory "cmTC_6f704.dir\\Debug\\cmTC_6f704.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_6f704.dir\\Debug\\cmTC_6f704.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_6f704.dir\\Debug\\cmTC_6f704.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_6f704.dir\\Debug\\\\" /Fd"cmTC_6f704.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-9vf7ow\\OpenMPCheckVersion.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.37.32824 for x64
+          OpenMPCheckVersion.cpp
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /openmp /Fo"cmTC_6f704.dir\\Debug\\\\" /Fd"cmTC_6f704.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-9vf7ow\\OpenMPCheckVersion.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-9vf7ow\\Debug\\cmTC_6f704.exe" /INCREMENTAL /ILK:"cmTC_6f704.dir\\Debug\\cmTC_6f704.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-9vf7ow/Debug/cmTC_6f704.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/out/build/Visual Studio/CMakeFiles/CMakeScratch/TryCompile-9vf7ow/Debug/cmTC_6f704.lib" /MACHINE:X64  /machine:x64 cmTC_6f704.dir\\Debug\\OpenMPCheckVersion.obj
+          cmTC_6f704.vcxproj -> D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-9vf7ow\\Debug\\cmTC_6f704.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_6f704.dir\\Debug\\cmTC_6f704.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6f704.dir\\Debug\\cmTC_6f704.tlog\\cmTC_6f704.lastbuildstate".
+        Done Building Project "D:\\Self_Practicing\\Computer Vision\\Learning_OpenCV\\ImageRecovery\\out\\build\\Visual Studio\\CMakeFiles\\CMakeScratch\\TryCompile-9vf7ow\\cmTC_6f704.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.70
+        
+      exitCode: 0
+...
