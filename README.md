@@ -67,7 +67,7 @@ Original | Defocus PSF (size = 5, radius = 10, noise-std = 8)
   - $$y = Hf + n$$
 
 - Least Squares
-  - Minimize
+  <!-- - Minimize
     $$J(f) = ||y - Hf||_2^2$$
   - Solve for f
     $$ \frac{\partial J}{\partial f} = 0 $$
@@ -75,7 +75,8 @@ Original | Defocus PSF (size = 5, radius = 10, noise-std = 8)
   - In Frequency Domain Using DFT
     $$ F(u, v) = \begin{cases} \frac{{H^*(u, v) \cdot Y(u, v)}}{{|H(u, v)|^2}}, & |H(u, v)| \neq 0 \text{ (}\geq T) \\ 0, & |H(u, v)| = 0 \text{ (} < T) \end{cases} $$
     $$H^*(u, v): \text{complex conjugate of } H(u, v)$$
-    $$T: \text{threshold to control noise amplitude, suppress F(u, v) to 0 when } |H(u, v)|^2 \text{ is too close or equal to 0} $$ 
+    $$T: \text{threshold to control noise amplitude, suppress F(u, v) to 0 when } |H(u, v)|^2 \text{ is too close or equal to 0} $$  -->
+  ![](./images/Least_Squares_Formula.png)
 
 - Constrained Least Squares
   - Minimize
@@ -95,9 +96,9 @@ Original | Defocus PSF (size = 5, radius = 10, noise-std = 8)
     $$f_0 = 0$$
     $$f_{k+1} = f_k + \beta \phi(f)$$
   - Iterative Least Squares:
-        $$\phi(f) = \frac{1}{2} \nabla_f ||y - Hf||^2$$
-        $$f_{k+1} = f_k + \beta H^T (y - Hf_k) = \beta H^T y + (I - \beta H^T H)f_k$$
-    - Frequency domain iteration
+        <!-- $$\phi(f) = \frac{1}{2} \nabla_f ||y - Hf||^2$$
+        $$f_{k+1} = f_k + \beta H^T (y - Hf_k) = \beta H^T y + (I - \beta H^T H)f_k$$ -->
+    <!-- - Frequency domain iteration
         $$F_{k+1} = \beta H^*(u, v)Y(u, v) + (1 - \beta |H(u, v)|^2)F_k(u, v)$$
     - Convergence
         $$
@@ -111,19 +112,21 @@ Original | Defocus PSF (size = 5, radius = 10, noise-std = 8)
         & |1 - \beta |H(u, v)|^2| < 1
         \\ \text{or } & 0 < \beta < \frac {2}{\max_{u, v} |H(u, v)|^2}
         \end{align*}
-        $$
+        $$ -->
+      ![](./images/Iterative_Least_Squares.png)
   - Iterative Constrained Least Squares
-        $$\phi(f) = \frac{1}{2} \nabla_f (||y - Hf||^2 + \alpha ||Cf||^2)$$ 
-        $$f_{k+1} = \beta H^T y + (I - \beta (H^T H + \alpha C^T C))f_k$$
+        <!-- $$\phi(f) = \frac{1}{2} \nabla_f (||y - Hf||^2 + \alpha ||Cf||^2)$$ 
+        $$f_{k+1} = \beta H^T y + (I - \beta (H^T H + \alpha C^T C))f_k$$ -->
       
-      - Frequency domain iteration
+      <!-- - Frequency domain iteration
         $$F_{k+1} = \beta H^*(u, v)Y(u, v) + (1 - \beta (|H(u, v)|^2 + \alpha |C(u, v)|^2))F_k(u, v)$$
       - Convergence 
         $$
         \begin{align*}
         R_k(u, v) &= \beta \sum_{l=0}^{k} (1 - \beta (|H(u, v)|^2 + \alpha |C(u, v)|^2))^l \cdot H^*(u, v)
         \\ &= \beta \frac{1 - (1 - \beta (|H(u, v)|^2 + \alpha |C(u, v)|^2))^k}{1 - (1 - \beta (|H(u, v)|^2 + \alpha |C(u, v)|^2))}H^*(u, v)
-        \end{align*}$$
+        \end{align*}$$ -->
+      ![](./images/Iterative_Constrained_Least_Squares.png)
 - Weiner Restoration Filter
   
 
