@@ -73,36 +73,96 @@
     },
     "cmake.debugConfig": {
         "args": [
-            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
-            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_motion_7_30_8_cameraman.png",
-            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_iterLS_motion_cameraman.png",
-            "-recov",
-            "-iterCLS",
-            "-motion",
-            "7",
-            "30",
-            "0.02",   // alpha
-            "0.0001", // beta
-            "100"     // maxIter
-
+            // Iterative LS
             // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
             // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_defocus_5_10_8_cameraman.png",
-            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_cls_defocus_0dot0001_0dot02_cameraman.png",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_iterLS_defocus_0dot001_800_cameraman.png",
+            // "-recov",
+            // "-iterLS",
+            // "-defocus",
+            // "5",
+            // "10",
+            // "0.001", // beta
+            // "800"     // maxIter
+
+            // Iterative CLS
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_defocus_5_10_8_cameraman.png",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_iterCLS_defocus_0dot05_0dot001_800_cameraman.png",
+            // "-recov",
+            // "-iterCLS",
+            // "-defocus",
+            // "5",
+            // "10",
+            // "0.05",   // alpha
+            // "0.001", // beta
+            // "800"     // maxIter
+
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/leopard.jpg",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/leopard.jpg",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_iterCLS_defocus_leopard.png",
+            // "-recov",
+            // "-iterCLS",
+            // "-motion",
+            // "5",
+            // "51",
+            // "0.05",   // alpha
+            // "0.001", // beta
+            // "500"     // maxIter
+
+            // LS
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/leopard.jpg",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/leopard.jpg",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_ls_motion_leopard_0dot01.jpg",
+            // "-recov",
+            // "-ls",
+            // "-motion",
+            // "5",
+            // "51",
+            // "0.15", // threshold_T
+
+            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/books_defocused.jpg",
+            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/books_defocused.jpg",
+            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_ls_defocus_books_defocused.jpg",
+            "-recov",
+            "-ls",
+            "-defocus",
+            "26",
+            "13",
+            "0.05", // threshold_T
+
+            // CLS
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_defocus_5_10_8_cameraman.png",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_cls_defocus_cameraman_0dot0015_0dot015.png",
             // "-recov",
             // "-cls",
             // "-defocus",
             // "5",
             // "10",
-            // "0.0001", // threshold_T
-            // "0.02"   // alpha
+            // "0.0015",   // alpha
+            // "0.015" // threshold_T
 
+            // Weiner
             // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
-            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_motion_5_1dot2_8_cameraman.png",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_motion_7_30_8_cameraman.png",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_weiner_motion_cameraman_8_0.png",
+            // "-recov",
+            // "-weiner",
+            // "-motion",
+            // "7",
+            // "30",
+            // "8",
+            // "0"
+
+            // Degradation arguments
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_motion_test_cameraman.png",
             // "-degr",
-            // "-gau",
+            // "-motion",
             // "5",
-            // "1.2",
-            // "8"   // noise std
+            // "50",
+            // "0"   // noise std
         ],
         "cwd": "${workspaceFolder}",
     }

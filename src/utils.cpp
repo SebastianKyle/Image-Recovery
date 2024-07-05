@@ -24,13 +24,17 @@ cv::Mat computeDFT(const cv::Mat &source_img, const cv::Size &size)
     return complex_img;
 }
 
-cv::Mat computeIDFT(const cv::Mat &cplx_img)
+cv::Mat computeIDFT(const cv::Mat &cplx_img, const cv::Size &original_size)
 {
     cv::Mat inverse_transform;
     cv::idft(cplx_img, inverse_transform, cv::DFT_SCALE | cv::DFT_REAL_OUTPUT);
 
     cv::Mat planes[2];
     cv::split(inverse_transform, planes);
+
+    if (original_size.width != 0 && original_size.height != 0) {
+        return planes[0](cv::Rect(std::abs(original_size.width - cplx_img.size().width), std::abs(original_size.height - cplx_img.size().height), cplx_img.size().width, cplx_img.size().height));
+    }
 
     return planes[0];
 }
@@ -195,4 +199,9 @@ double computePSNR(const cv::Mat &original_img, const cv::Mat &restored_img)
     double psnr = 10.0 * std::log10((255 * 255) / mse);
 
     return psnr;
+}
+
+double computeRelativeChange(const cv::Mat &previous, const cv::Mat &current)
+{
+    return cv::norm(current - previous) / cv::norm(previous);
 }
