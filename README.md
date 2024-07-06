@@ -141,7 +141,7 @@ Original | Defocus PSF (size = 5, radius = 10, noise-std = 8)
 ## Experimental Results
 - Computed metrics (ISNR, PSNR) and other informations will be provided (printed) in terminal window used to run the application.
 
-- For experimental purpose, it is assumed that the original undegraded image is available since one can produce its degraded version using this application. However, if you want to try with abitrarily degraded image and the undegraded one is unavailable, source image path can be provided with a random image so long as the degraded image path is correct.
+- For experimental purpose, it is assumed that the original undegraded image is available since one can produce its degraded version using this application. However, if you want to try with arbitrarily degraded image and the undegraded one is unavailable, source image path can be provided with a random image so long as the degraded image path is correct.
 
 - Least Squares
 
