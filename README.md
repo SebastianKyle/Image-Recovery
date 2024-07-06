@@ -128,7 +128,14 @@ Original | Defocus PSF (size = 5, radius = 10, noise-std = 8)
         \end{align*}$$ -->
       ![](./images/Iterative_Constrained_Least_Squares.png)
 - Weiner Restoration Filter
-  
+  ![](./images/WeinerFilter.png)
+  $$h(i, j): \text{degradation filter}$$
+  $$w(i, j): \text{noise}$$
+  $$r(i, j): \text{restoration filter}$$
+
+  - Solution for r(i, j) in frequency domain
+    $$R(\omega_1, \omega_2) = \frac{H^*(\omega_1, \omega_2).P_{f}(\omega_1, \omega_2)}{|H(\omega_1, \omega_2)|^2 . P_{f}(\omega_1, \omega_2) + P_{w}(\omega_1, \omega_2)}$$
+    $$P_x(\omega_1, \omega_2): \text{power spectrum of x}$$
 
 ## Experimental Results
 - Least Squares
