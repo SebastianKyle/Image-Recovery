@@ -37,6 +37,7 @@ cmake ..
 - It is recommended to place input image in 'images' folder of the repo and set input path to the 'images' or 'results/degraded' folder and output path to 'results/degraded' or 'results/recovered' folder for running command.
 
 ## Apply degradation to images
+- Degradation filter is assumed to be square kernel and noise is Gaussian distributed
 - Gaussian Point Spread Function
 ```sh
 .\ImageRecovery.exe -<input-image-path> -<out-image-path> -degr -gau <psf-size> <sigma> <noise-standard-deviation>
@@ -138,6 +139,10 @@ Original | Defocus PSF (size = 5, radius = 10, noise-std = 8)
     $$P_x(\omega_1, \omega_2): \text{power spectrum of x}$$
 
 ## Experimental Results
+- Computed metrics (ISNR, PSNR) and other informations will be provided (printed) in terminal window used to run the application.
+
+- For experimental purpose, it is assumed that the original undegraded image is available since one can produce its degraded version using this application. However, if you want to try with abitrarily degraded image and the undegraded one is unavailable, source image path can be provided with a random image so long as the degraded image path is correct.
+
 - Least Squares
 
 ```sh
