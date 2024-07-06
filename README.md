@@ -231,6 +231,8 @@ Defocus PSF (size=5,radius=10,noise-std=8) | Iter CLS Restored (Defocus, 5, 10, 
 .\ImageRecovery.exe -<source-image-path> -<degraded-image-path> -<out-image-path> -recov -weiner -<psf-type> <psf-size> <sigma||angle||radius> <noise-std> <use-source-power-spectrum>
 ```
 
+- use-source-power-spectrum: if true, use the provided original undegraded image to compute the power spectrum $P_f$. Otherwise, use the degraded image itself to compute $P_f$
+
 Motion Blur PSF (size=7,angle,noise-std=8) | Weiner Restored (Motion, 7, 30, noise-std=8, use-source-power-spectrum=1(true))
 :--------------------------:|:--------------------------:
 ![](./results/degraded/degraded_motion_7_30_8_cameraman.png) | ![](./results/recovered/recovered_weiner_motion_cameraman_8_1.png)
