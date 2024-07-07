@@ -38,6 +38,8 @@ int main(int argc, char **argv)
     double size = 0;
     double noise_std = 0;
     bool use_src_ps = true;
+    int psf_rows = 0, psf_cols = 0;
+    double learning_rate = 0;
 
     // Recovery approach
     bool ls = false, cls = false;
@@ -47,6 +49,7 @@ int main(int argc, char **argv)
     int maxIter = 0;
     bool weiner = false;
     bool blind = false;
+    bool varBayes = false;
 
     /* -<psf-type> <psf-size> -degr <sigma || angle || radius> <noise-std>*/
     if (str_compare(argv[3], "-degr"))
@@ -210,6 +213,15 @@ int main(int argc, char **argv)
             {
                 success = ImageRecovery::weinerFilter(source_img, degraded_img, dest_img, psf, noise_std, use_src_ps);
             }
+        }
+        else if (str_compare(argv[5], "-varbayes")) {
+            varBayes = true;
+            psf_rows = char_2_int(argv, 6);
+            psf_cols = char_2_int(argv, 7);
+            maxIter = char_2_int(argv, 8);
+            learning_rate = char_2_double(argv, 9);
+
+            success = ImageRecovery::variationalBayesianInference(degraded_img, dest_img, psf_rows, psf_cols, maxIter, learning_rate);
         }
     }
 

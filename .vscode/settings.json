@@ -121,15 +121,15 @@
             // "51",
             // "0.15", // threshold_T
 
-            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/books_defocused.jpg",
-            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/books_defocused.jpg",
-            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_ls_defocus_books_defocused.jpg",
-            "-recov",
-            "-ls",
-            "-defocus",
-            "26",
-            "13",
-            "0.05", // threshold_T
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/books_defocused.jpg",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/books_defocused.jpg",
+            // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_ls_defocus_books_defocused.jpg",
+            // "-recov",
+            // "-ls",
+            // "-defocus",
+            // "26",
+            // "13",
+            // "0.05", // threshold_T
 
             // CLS
             // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
@@ -154,6 +154,17 @@
             // "30",
             // "8",
             // "0"
+
+            // Variational Bayesian
+            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",
+            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/degraded/degraded_motion_7_30_8_cameraman.png",
+            "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/results/recovered/recovered_varbayes_cameraman_5_5_100_0dot01.png",
+            "-recov",
+            "-varbayes",
+            "5",
+            "5",
+            "100",
+            "0.01",
 
             // Degradation arguments
             // "D:/Self_Practicing/Computer Vision/Learning_OpenCV/ImageRecovery/images/cameraman.png",

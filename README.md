@@ -1,7 +1,7 @@
 # Image Recovery Techniques Implementation Using OpenCV C++
 
 ### Description
-Application for experimenting Image Recovery/Restoration techniques including Least Squares, Constrained Least Squares and their iterative approach, Weiner Restoration Filter.
+Application for experimenting Image Recovery/Restoration techniques including Least Squares, Constrained Least Squares and their iterative approach, Weiner Restoration Filter and Variational Bayesian blind deconvolution(in-progress).
 
 ## Prerequisites
 

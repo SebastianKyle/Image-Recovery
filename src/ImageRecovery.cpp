@@ -273,10 +273,127 @@ int ImageRecovery::weinerFilter(const cv::Mat &source_img, const cv::Mat &degrad
     return 1;
 }
 
-int ImageRecovery::blindDeconvolution(const cv::Mat &source_img, cv::Mat &dest_img, int iterations)
+double ImageRecovery::computeTV(const cv::Mat &img, const cv::Mat &u)
 {
-    if (!source_img.data)
+    double tv = 0.0;
+
+    for (int y = 0; y < img.rows - 1; y++)
+    {
+        for (int x = 0; x < img.cols - 1; x++)
+        {
+            double dx = img.at<double>(y, x + 1) - img.at<double>(y, x);
+            double dy = img.at<double>(y + 1, x) - img.at<double>(y, x);
+            tv += u.at<double>(y, x) * std::sqrt(dx * dx + dy * dy + 1e-6);
+        }
+    }
+
+    return tv;
+}
+
+cv::Mat ImageRecovery::updateX(const cv::Mat &y, const cv::Mat &h, const cv::Mat &u, double beta, double alpha_im, int iters, double learning_rate)
+{
+    cv::Mat x = cv::Mat::zeros(y.size(), CV_64F);
+    cv::Mat Hx;
+
+    for (int iter = 0; iter < iters; iter++)
+    {
+        cv::filter2D(x, Hx, -1, h, cv::Point(-1, -1), 0, cv::BORDER_REPLICATE);
+        cv::Mat grad = beta * (Hx - y);
+
+        for (int i = 0; i < x.rows - 1; i++)
+        {
+            for (int j = 0; j < x.cols - 1; j++)
+            {
+                double dx = x.at<double>(i, j + 1) - x.at<double>(i, j);
+                double dy = x.at<double>(i + 1, j) - x.at<double>(i, j);
+
+                grad.at<double>(i, j) += alpha_im * u.at<double>(i, j) * (dx + dy);
+            }
+        }
+
+        x -= learning_rate * grad;
+    }
+
+    return x;
+}
+
+cv::Mat ImageRecovery::updateH(const cv::Mat &y, const cv::Mat &x, double beta, double alpha_bl, int iters, double learning_rate)
+{
+    cv::Mat h = cv::Mat::ones(3, 3, CV_64F);
+    cv::Mat Hx;
+
+    for (int iter = 0; iter < iters; iter++)
+    {
+        cv::filter2D(x, Hx, -1, h, cv::Point(-1, -1), 0, cv::BORDER_REPLICATE);
+        cv::Mat grad = beta * (Hx - y);
+
+        cv::Mat laplacian;
+        cv::Laplacian(h, laplacian, -1);
+        grad += alpha_bl * laplacian;
+        h -= learning_rate * grad;
+    }
+
+    return h;
+}
+
+cv::Mat ImageRecovery::updateU(const cv::Mat &x)
+{
+    cv::Mat u = cv::Mat::ones(x.size(), CV_64F);
+
+    for (int i = 0; i < x.rows - 1; ++i)
+    {
+        for (int j = 0; j < x.cols - 1; ++j)
+        {
+            double dx = x.at<double>(i, j + 1) - x.at<double>(i, j);
+            double dy = x.at<double>(i + 1, j) - x.at<double>(i, j);
+            u.at<double>(i, j) = 1.0 / std::sqrt(dx * dx + dy * dy + 1e-6);
+        }
+    }
+
+    return u;
+}
+
+void ImageRecovery::updateHyperparameters(double &alpha_im, double &alpha_bl, double &beta, const cv::Mat &x, const cv::Mat &h)
+{
+    alpha_im = 1.0 / (0.5 * (computeTV(x, cv::Mat::ones(x.size(), CV_64F)) + 1e-6));
+    alpha_bl = 1.0 / (0.5 * (cv::norm(h, cv::NORM_L2) + 1e-6));
+    beta = 1.0 / (0.5 * (cv::norm(x - h, cv::NORM_L2) + 1e-6));
+}
+
+cv::Mat ImageRecovery::initializePSF(int rows, int cols, const std::string& method) {
+    cv::Mat h = cv::Mat::ones(rows, cols, CV_64F);
+
+    if (method == "gaussian") {
+        cv::Mat gauss_kernel = cv::getGaussianKernel(rows, 1.0, CV_64F) * cv::getGaussianKernel(cols, 1.0, CV_64F).t();
+        gauss_kernel.copyTo(h);
+    }
+
+    // Normalize
+    h /= cv::sum(h)[0];
+
+    return h;
+}
+
+int ImageRecovery::variationalBayesianInference(const cv::Mat &degraded_img, cv::Mat &dest_img, int psf_rows, int psf_cols, int iters, double learning_rate)
+{
+    if (!degraded_img.data)
         return 0;
+
+    cv::Mat y;
+    degraded_img.convertTo(y, CV_64F, 1.0 / 255.0);
+
+    cv::Mat x = cv::Mat::zeros(y.size(), CV_64F);
+    cv::Mat h = initializePSF(psf_rows, psf_cols, "gaussian");
+    double alpha_im = 1.0, alpha_bl = 1.0, beta = 1.0;
+
+    for (int iter = 0; iter < iters; iter++) {
+        cv::Mat u = updateU(x);
+        x = updateX(y, h, u, beta, alpha_im, iters, learning_rate);
+        h = updateH(y, x, beta, alpha_bl, iters, learning_rate);
+        updateHyperparameters(alpha_im, alpha_bl, beta, x, h);
+    }
+
+    x.convertTo(dest_img, CV_8U, 255.0);
 
     return 1;
 }
